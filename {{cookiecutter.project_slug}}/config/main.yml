@@ -1,0 +1,14 @@
+hydra:
+  output_subdir: null  
+  run:
+    dir: .
+
+defaults:
+  - process: process_a
+  - model: model_m
+  - _self_
+
+data:
+  raw: data/raw/sample.csv
+  processed: data/processed/processed.csv
+  final: data/final/final.csv

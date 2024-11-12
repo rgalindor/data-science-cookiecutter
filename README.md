@@ -1,15 +1,25 @@
-# Data Science Cookie Cutter
+<!-- PROJECT SHIELDS -->
+
+[![Contributors][contributors-shield]][contributors-url]
+[![Forks][forks-shield]][forks-url]
+[![Stargazers][stars-shield]][stars-url]
+[![Issues][issues-shield]][issues-url]
+
+# Data Science Cookiecutter Template
+[![Python >=3.8][python-gt3-8-shield]][python-gt3-8-url] [![Code style][black-shield]][black-url] [![pre-commit][pre-commit-shield]][pre-commit-url]
 
 This repo is based on a nice template first presented in the [Github repo for DataScience cookie cutter ](https://github.com/khuyentran1401/data-science-template/blob/dvc-poetry/README.md) by [Khuyen Tran](https://github.com/khuyentran1401)
 
 This repository provides a template that incorporates best practices to create a maintainable and reproducible data science project.
 
 ## Tools used in this project
- - [poetry](#) for dependency management
- - [git](#) for Code Version Control
- - [pdoc](#) for project documentation
- - [hydra](#) to manage configuration files
- - [DVC](#) for Data Version Control
+ - [![Poetry][Poetry-shield]][Poetry-url] for dependency management
+ - [![Git][Git-shield]][Poetry-url] for Code Version Control
+ - [![Pdoc][Pdoc-shield]][Pdoc-url] for project documentation
+ - [![Hydra][Hydra-shield]][Hydra-url] to manage configuration files
+ - [![DVC][DVC-shield]][DVC-url] for Data Version Control
+ - [![Pytest][Pytest-shield]][Pytest-url] for Code testing
+ - [![Make][Make-shield]][Make-url] for quick builds at onboarding
  
  ## Project Structure
 
@@ -29,21 +39,21 @@ This repository provides a template that incorporates best practices to create a
 │   ├── raw                         # raw data
 │   └── raw.dvc                     # DVC file of data/raw
 ├── docs                            # documentation for your project
-├── .gitignore                      # ignore files that cannot commit to Git
-├── Makefile                        # store useful commands to set up the environment
 ├── models                          # store models
 ├── notebooks                       # store notebooks
-├── .pre-commit-config.yaml         # configurations for pre-commit
-├── pyproject.toml                  # dependencies for poetry
-├── README.md                       # describe your project
 ├── src                             # store source code
 │   ├── __init__.py                 # make src a Python module 
 │   ├── process.py                  # process data before training model
 │   └── train_model.py              # train model
-└── tests                           # store tests
-    ├── __init__.py                 # make tests a Python module 
-    ├── test_process.py             # test functions for process.py
-    └── test_train_model.py         # test functions for train_model.py
+├── tests                           # store tests
+│   ├── __init__.py                 # make tests a Python module
+│   ├── test_process.py             # test functions for process.py
+│   └── test_train_model.py         # test functions for train_model.py
+├── .gitignore                      # ignore files that cannot commit to Git
+├── .pre-commit-config.yaml         # configurations for pre-commit
+├── Makefile                        # store useful commands to set up the environment
+├── pyproject.toml                  # dependencies for poetry
+└── README.md                       # describe your project
 ```
 
 ## How to use this project
@@ -65,3 +75,45 @@ Create a project based on the template:
 ```bash
 cookiecutter https://github.com/rgalindor/data-science-cookiecutter --checkout main
 ```
+
+<!-- MARKDOWN LINKS & IMAGES -->
+<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
+<!-- [contributors-shield]: https://img.shields.io/badge/contributors-666666?style=for-the-badge -->
+[contributors-shield]: https://img.shields.io/github/contributors/rgalindor/data-science-cookiecutter.svg?style=for-the-badge
+[contributors-url]: https://github.com/rgalindor/data-science-cookiecutter/graphs/contributors
+<!-- [forks-shield]: https://img.shields.io/badge/forks-666666?style=for-the-badge -->
+[forks-shield]: https://img.shields.io/github/forks/rgalindor/data-science-cookiecutter.svg?style=for-the-badge
+[forks-url]: https://github.com/rgalindor/data-science-cookiecutter/network/members
+<!-- [stars-shield]: https://img.shields.io/badge/stars-666666?style=for-the-badge -->
+[stars-shield]: https://img.shields.io/github/stars/rgalindor/data-science-cookiecutter.svg?style=for-the-badge
+[stars-url]: https://github.com/rgalindor/data-science-cookiecutter/stargazers
+<!-- [issues-shield]: https://img.shields.io/badge/issues-666666?style=for-the-badge -->
+[issues-shield]: https://img.shields.io/github/issues/rgalindor/data-science-cookiecutter.svg?style=for-the-badge
+[issues-url]: https://github.com/rgalindor/data-science-cookiecutter/issues
+<!-- TOOLS -->
+[python-gt3-8-shield]: https://img.shields.io/badge/python->=3.8-blue.svg?logo=python&logoColor=white
+[python-gt3-8-url]: https://www.python.org/downloads/release/python-38/
+[black-shield]: https://img.shields.io/badge/code%20style-black-000000.svg
+[black-url]: https://github.com/psf/black
+[pre-commit-shield]: https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit
+[pre-commit-url]: https://github.com/pre-commit/pre-commit
+[Poetry-shield]: https://img.shields.io/badge/Poetry-444444.svg?style=for-the-badge&logo=poetry
+[Poetry-url]: https://python-poetry.org
+[Docker-shield]: https://img.shields.io/badge/docker-%230db7ed.svg?style=for-the-badge&logo=docker&logoColor=white
+[Docker-url]: https://python-poetry.org
+[Llama-index-shield]: https://img.shields.io/badge/-%F0%9F%A6%99%20%20%20%20%20llama--index%20-green?style=for-the-badge
+[Llama-url]: https://docs.llamaindex.ai/en/stable
+[FastAPI-shield]: https://img.shields.io/badge/FastAPI-009485.svg?style=for-the-badge&logo=fastapi&logoColor=white
+[FastAPI-url]: https://fastapi.tiangolo.com
+[Git-shield]: https://img.shields.io/badge/Git-444444.svg?style=for-the-badge&logo=git
+[Git-url]: https://git-scm.com/
+[Pdoc-shield]: https://img.shields.io/badge/pdoc-229944.svg?style=for-the-badge&logo=python&logoColor=yellow
+[Pdoc-url]: https://pdoc3.github.io/pdoc/doc/pdoc/#gsc.tab=0
+[Hydra-shield]: https://img.shields.io/badge/Hydra-54c7ec.svg?style=for-the-badge&logo=python
+[Hydra-url]: https://hydra.cc/docs/intro/
+[DVC-shield]: https://img.shields.io/badge/DVC-444444.svg?style=for-the-badge&logo=dvc
+[DVC-url]: https://dvc.org/doc
+[Pytest-shield]: https://img.shields.io/badge/Pytest-444444.svg?style=for-the-badge&logo=pytest
+[Pytest-url]: https://docs.pytest.org/en/stable/
+[Make-shield]: https://img.shields.io/badge/Makefile-a32d2a.svg?style=for-the-badge&logo=gnu
+[Make-url]: https://github.com/mirror/make

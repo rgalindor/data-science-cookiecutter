@@ -111,7 +111,7 @@ Thanks again!
 
 ### Top contributors:
 
-<a href="https://github.com/othneildrew/Best-README-Template/graphs/contributors">
+<a href="https://github.com/rgalindor/data-science-cookiecutter/graphs/contributors">
   <img src="https://contrib.rocks/image?repo=rgalindor/data-science-cookiecutter" alt="contrib.rocks image" />
 </a>
 

@@ -76,6 +76,57 @@ Create a project based on the template:
 cookiecutter https://github.com/rgalindor/data-science-cookiecutter --checkout main
 ```
 
+
+## Contributing
+
+Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are greatly appreciated. Don't forget to give the project a star!
+
+If you have a suggestion that would make this better, please **fork the repo** and **create a pull request**. You can also simply open an issue with the tag "enhancement". Please follow the following guidelines when contributing:
+
+1. **Create your feature branch:** Use the appropriate branch naming convention based on the type of change you are making:
+
+- For new development, use: `feat/commit_name`
+- For bug fixes, use: `fix/commit_name`
+- For documentation improvements, use: `doc/commit_name`
+
+Example:
+
+```bash
+git checkout -b feat/add-an-awesome-new-feature
+```
+2. **Commit your changes:** Make sure your commit message is clear and follows conventional commit guidelines:
+
+```bash
+git commit -m 'feat: add a fantastic new feature'
+```
+3. **Push to the branch:**
+
+```bash
+git push origin feat/add-an-awesome-new-feature
+```
+4. **Open a Pull Request:** After pushing your branch, open a Pull Request (PR) and ensure to follow the [guidelines on conventional commits](https://www.conventionalcommits.org/en/v1.0.0/)
+
+
+Thanks again!
+
+### Top contributors:
+
+<a href="https://github.com/othneildrew/Best-README-Template/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=rgalindor/data-science-cookiecutter" alt="contrib.rocks image" />
+</a>
+
+
+<!-- CONTACT -->
+## Contact
+
+Roberto Galindo Ramírez - rgalindo.biocomputo@gmail.com.com
+
+[![LinkedIn][linkedin-shield]][linkedin-url]
+
+Project Link: [https://github.com/rgalindor/data-science-cookiecutter](https://github.com/rgalindor/data-science-cookiecutter)
+
+
+
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
 <!-- [contributors-shield]: https://img.shields.io/badge/contributors-666666?style=for-the-badge -->
@@ -90,6 +141,9 @@ cookiecutter https://github.com/rgalindor/data-science-cookiecutter --checkout m
 <!-- [issues-shield]: https://img.shields.io/badge/issues-666666?style=for-the-badge -->
 [issues-shield]: https://img.shields.io/github/issues/rgalindor/data-science-cookiecutter.svg?style=for-the-badge
 [issues-url]: https://github.com/rgalindor/data-science-cookiecutter/issues
+
+[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
+[linkedin-url]: https://www.linkedin.com/in/roberto-galindo-ram%C3%ADrez-034a5451
 <!-- TOOLS -->
 [python-gt3-8-shield]: https://img.shields.io/badge/python->=3.8-blue.svg?logo=python&logoColor=white
 [python-gt3-8-url]: https://www.python.org/downloads/release/python-38/

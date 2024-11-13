@@ -1,0 +1,40 @@
+version: '3'
+
+services:
+  backend:
+    build:
+      context: .
+      target: devel
+    command: sh -c "poetry run fastapi dev src/app.py --port={{ cookiecutter.docker_dev_port }}"
+    ports:
+      - {{ cookiecutter.docker_dev_port }}:{{ cookiecutter.docker_dev_port }}
+    volumes:
+      - ./data:/app/data
+      - ./src:/app/src
+      - ./tests:/app/tests
+      - ./models:/app/models
+    env_file:
+      - .env
+    networks:
+      - data
+    profiles:
+      - core
+  test:
+    build:
+      context: .
+      target: test
+    command: sh -c "poetry run python -m pytest ."
+    volumes:
+      - ./data:/app/data
+      - ./src:/app/src
+      - ./tests:/app/tests
+    env_file:
+      - .env
+    networks:
+      - data
+    profiles:
+      - test
+
+networks:
+  data:
+    driver: bridge

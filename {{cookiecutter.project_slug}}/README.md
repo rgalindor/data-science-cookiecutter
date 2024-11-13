@@ -24,6 +24,7 @@ By: {{ cookiecutter.author }}
 
  - [![Poetry][Poetry-shield]][Poetry-url] for dependency management
  - [![FastAPI][FastAPI-shield]][FastAPI-url] for API management
+ - [![Docker][Docker-shield]][Docker-url] for containerization
 
 And the basic set of tools:
 
@@ -54,6 +55,8 @@ And the basic set of tools:
 │   └── app.py                      # Main API entrypoint
 ├── tests                           # Tests code
 ├── .gitignore                      # ignore files that cannot commit to Git
+├── docker-compose.yml              # local container manager deployment
+├── Dockerfile                      # container recipe
 ├── Makefile                        # commands to set up the environment
 ├── .pre-commit-config.yaml         # configurations for pre-commit
 ├── pyproject.toml                  # Poetry dependencies
@@ -101,6 +104,32 @@ After this the swagger page will be available at [localhost:8000/docs](http://lo
 poetry run uvicorn src.app:app  --reload --host=0.0.0.0 --port=8000
 ```
 
+### Container usage
+
+The project relies in the use of docker as containerization technology. So it is viable to build an image of the project suitable to contain the entire application and deployed easily with a docker engine. This project contains a `Dockerfile` structured in layers, so you can build specific target layers (`devel`, `test`, `app`) for different needs.
+
+
+```bash
+docker build -t devel .
+```
+
+Then you could mount volumes `data` and `models` to container folders if you want to use local folders for development.
+
+> [!IMPORTANT]
+> If you need to deploy the application you will need to use the `app` target to build an image free of local data using the classic docker build/push flow.
+
+In addition, there is also a way to simplify the development management by using docker compose:
+
+```bash
+docker compose --profile core up -d
+```
+
+That will turn up the container using local folders mounted and every new change you add for your new feature will be use to recharge the status of the app. Then you can use `docker compose logs` to get the latest logs in the console, or `docker compose down` to turn down all the containers and clean the docker resources.
+
+It is relevant to mention that there are three major profiles to be used with docker compose:
+
+- `core`: Will enable local deployment of backend API service.
+- `test`: Allow to run tests in the backend container.
 
 ## Contact info
 

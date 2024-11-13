@@ -13,12 +13,13 @@ This repo is based on a nice template first presented in the [Github repo for Da
 This repository provides a template that incorporates best practices to create a maintainable and reproducible data science project.
 
 ## Tools used in this project
+
  - [![Poetry][Poetry-shield]][Poetry-url] for dependency management
- - [![Git][Git-shield]][Poetry-url] for Code Version Control
+ - [![Git][Git-shield]][Poetry-url] for code version control
  - [![Pdoc][Pdoc-shield]][Pdoc-url] for project documentation
  - [![Hydra][Hydra-shield]][Hydra-url] to manage configuration files
- - [![DVC][DVC-shield]][DVC-url] for Data Version Control
- - [![Pytest][Pytest-shield]][Pytest-url] for Code testing
+ - [![DVC][DVC-shield]][DVC-url] for data version control
+ - [![Pytest][Pytest-shield]][Pytest-url] for code testing
  - [![Make][Make-shield]][Make-url] for quick builds at onboarding
  
  ## Project Structure

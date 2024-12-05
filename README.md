@@ -80,10 +80,10 @@ pip install cookiecutter
 
 ### Usage
 
-1. Create a project based on the template (this example uses `main` branch, however you can use other available branches):
+1. Create a project based on the template (this example uses `base` branch, however you can use `main` or other available branches):
 
 ```bash
-cookiecutter https://github.com/rgalindor/data-science-cookiecutter --checkout main
+cookiecutter https://github.com/rgalindor/data-science-cookiecutter --checkout base
 ```
 
 2. Follow prompted instructions to set up the new project, the `project_slug` will be used to create and name a new directory containing the new repository _i.e._ `new_project`, then move to the folder:

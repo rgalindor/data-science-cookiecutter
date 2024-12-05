@@ -58,24 +58,53 @@ This repository provides a template that incorporates best practices to create a
 
 ## How to use this project
 
-Install Cookiecutter using an environment:
+### Prerequisites
+
+[![Cookiecutter][Cookiecutter-shield]][Cookiecutter-url]
+[![Make][Make-req-shield]][Make-url]
+[![Pyenv][Pyenv-shield]][Pyenv-url]
+
+1. Ensure you use the right Python version, a recommended way to do it _i.e._ using version `3.11`:
+
+```bash
+pyenv install 3.11
+pyenv local 3.11
+```
+
+2. Install Cookiecutter using a selected environment:
+
 ```bash
 pip install cookiecutter
 ```
 
-```bash
-conda install cookiecutter
-```
 
-```bash
-poetry install cookiecutter
-```
+### Usage
 
-Create a project based on the template:
+1. Create a project based on the template (this example uses `main` branch, however you can use other available branches):
+
 ```bash
 cookiecutter https://github.com/rgalindor/data-science-cookiecutter --checkout main
 ```
 
+2. Follow prompted instructions to set up the new project, the `project_slug` will be used to create and name a new directory containing the new repository _i.e._ `new_project`, then move to the folder:
+
+```bash
+cd new_project
+```
+
+3. Get sure to switch your local environment to one with a Python version defined in the previous step, _i.e._ `3.11`. And make sure you deactivate any further environment _i.e._ by using deactivate functions like `conda deactivate`.
+
+```bash
+pyenv local 3.11
+```
+
+4. Init the project
+
+```bash
+make init
+```
+
+This will install fresh all the dependencies within the project. You can use other make options to facilitate your developing experience.
 
 ## Contributing
 
@@ -171,3 +200,8 @@ Project Link: [https://github.com/rgalindor/data-science-cookiecutter](https://g
 [Pytest-url]: https://docs.pytest.org/en/stable/
 [Make-shield]: https://img.shields.io/badge/Makefile-a32d2a.svg?style=for-the-badge&logo=gnu
 [Make-url]: https://github.com/mirror/make
+[Cookiecutter-shield]: https://img.shields.io/badge/cookiecutter-required-yellow?style=plastic&logo=cookiecutter
+[Cookiecutter-url]: https://github.com/cookiecutter/cookiecutter
+[Pyenv-shield]: https://img.shields.io/badge/pyenv-recommended-green?style=plastic&logo=python
+[Pyenv-url]: https://github.com/pyenv/pyenv
+[Make-req-shield]: https://img.shields.io/badge/make-required-yellow.svg?style=plastic&logo=gnu
